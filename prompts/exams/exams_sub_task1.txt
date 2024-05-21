@@ -1,0 +1,2 @@
+### Task
+Given the SQL query, i.e., SQL_1, briefly describe how it works.

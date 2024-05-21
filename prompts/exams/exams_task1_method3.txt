@@ -1,0 +1,2 @@
+### Task
+Given two SQL queries with explanation, SQL_1 and SQL_2, determine whether SQL_1 and SQL_2 are "Equivalent" or "Non Equivalent". Two SQL queries are "Equivalent" if both queries produce the same result when executed on a database schema.

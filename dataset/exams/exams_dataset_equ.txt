@@ -1,0 +1,8 @@
+select x.uid, x.uname, (select count(*) from Picture y where x.uid = y.uid and y.size > 1000000) from Usr x where x.city = ’Denver’;
+select x.uid, x.uname, count(y.pid) from Usr x left outer join Picture y on x.uid = y.uid and y.size > 1000000 group by x.uid, x.uname, x.city having x.city = ’Denver’;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v, Picture w where x.uid = u.uid and x.uid = v.uid and x.uid = w.uid and u.size > 1000000 and v.size < 3000000 and w.size = u.size;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v, Picture w where x.uid = u.uid and x.uid = v.uid and x.uid = w.uid and u.size > 1000000 and v.size < 3000000 and w.size > 1000000;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v, Picture w where x.uid = u.uid and x.uid = v.uid and x.uid = w.uid and u.size > 1000000 and v.size < 3000000 and w.size = u.size;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v where x.uid = u.uid and x.uid = v.uid and u.size > 1000000 and v.size < 3000000;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v, Picture w where x.uid = u.uid and x.uid = v.uid and x.uid = w.uid and u.size > 1000000 and v.size < 3000000 and w.size = u.size;
+select distinct x.uid, x.uname from Usr x, Picture u, Picture v, Picture w where x.uid = u.uid and x.uid = v.uid and x.uid = w.uid and u.size > 1000000 and v.size < 3000000 and w.size = v.size;
